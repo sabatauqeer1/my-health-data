@@ -1,0 +1,72 @@
+body {
+  background-color: antiquewhite;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+  background-color: #009879;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+table td th {
+  padding: 100px 15px;
+}
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+table tr:nth-child(3n) {
+  background-color: #f9f9f9;
+}
+
+table tr.highlight {
+  background-color: #f2f9f8;
+  font-weight: bold;
+  color: #009879;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+h1 {
+  text-align: center;
+  color: #009879;
+}
+h2 {
+  text-align: center;
+
+  color: #009879;
+}
+p {
+  text-align: center;
+  color: #009879;
+}
+#trash {
+  color: red;
+  border: none;
+  background-color: transparent;
+}
+#deleteButton {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+.formLabel {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}

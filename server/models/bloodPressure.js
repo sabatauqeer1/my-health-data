@@ -1,32 +1,23 @@
-
 import mongoose from "mongoose";
-const BloodPressureSchema = new mongoose.Schema({
+const BloodPressureSchema = new mongoose.Schema(
+  {
     Systolic: {
-    type: Array,
-    required: true,
+      type: Number,
+      required: true,
+    },
+    Diastolic: {
+      type: Number,
+      required: true,
+    },
+    HeartBeat: {
+      type: Number,
+      required: true,
+    },
   },
-  Diastolic : {
-    type: Array,
-    required: true,
-  }
-},
-{
-  timestamps: { createdAt: true, updatedAt: false ,overoverwriteImmutable: true} 
-});
+  { timestamps: true }
+);
 
-BloodPressureSchema.pre("save", async function (next){
- const oldTimeStamp = this.createdAt
- const newTimeStamp = oldTimeStamp.toDateString()
-
- console.log(newTimeStamp);
- 
-next()
-
-
- 
-  
-}
-  )
-
-
-export const BloodPressure = mongoose.model("BloodPressure", BloodPressureSchema);
+export const BloodPressure = mongoose.model(
+  "BloodPressure",
+  BloodPressureSchema
+);

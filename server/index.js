@@ -4,12 +4,10 @@ import router from "./router/routes.js";
 import { configDotenv } from "dotenv";
 import cors from "cors";
 
-
 configDotenv({ path: "./.env" });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
 
 app.use(
   cors({
@@ -21,9 +19,9 @@ app.use(
 //headers
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/myhealthaverage", router);
-
 
 app.listen(PORT, () => {
   db();
