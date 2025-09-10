@@ -1,2 +1,1 @@
-# my-health-average
-keeping track of your health 
+# my-health-data
