@@ -10,14 +10,13 @@ const MyHealthAverage = () => {
   const [isShowWarning, setisShowWarning] = useState(false);
   const [warning, setWarning] = useState(" ");
   const [monthData, setmonthData] = useState([]);
-  const [popup, setpopup] = useState(false);
 
   const [averages, setAverages] = useState([]);
 
   async function monthlyData() {
     try {
       const response = await axios.get(
-        "http://localhost:3001/api/myhealthaverage/monthlydata"
+        "https://my-health-data.onrender.com/api/myhealthaverage/monthlydata"
       );
       setmonthData(response.data);
     } catch (error) {
@@ -27,7 +26,7 @@ const MyHealthAverage = () => {
   const deleteSheet = async () => {
     try {
       const response = await axios.delete(
-        "http://localhost:3001/api/myhealthaverage/deletesheet"
+        "https://my-health-data.onrender.com/api/myhealthaverage/deletesheet"
       );
       if (response.status === 200) {
         monthlyData();
@@ -41,7 +40,7 @@ const MyHealthAverage = () => {
 
     try {
       const response = await axios.delete(
-        "http://localhost:3001/api/myhealthaverage/deleteone",
+        "https://my-health-data.onrender.com/api/myhealthaverage/deleteone",
         { data: { id: ObjectId } }
       );
 
@@ -103,11 +102,14 @@ const MyHealthAverage = () => {
 
     //daily input value /post
     try {
-      await axios.post("http://localhost:3001/api/myhealthaverage/dailydata", {
-        systolic: e.target.systolic.value,
-        diastolic: e.target.diastolic.value,
-        heartbeat: e.target.heartbeat.value,
-      });
+      await axios.post(
+        "https://my-health-data.onrender.com/api/myhealthaverage/dailydata",
+        {
+          systolic: e.target.systolic.value,
+          diastolic: e.target.diastolic.value,
+          heartbeat: e.target.heartbeat.value,
+        }
+      );
 
       monthlyData();
       setWarning("log in more value to get avg");
