@@ -10,6 +10,7 @@ const MyHealthAverage = () => {
   const [isShowWarning, setisShowWarning] = useState(false);
   const [warning, setWarning] = useState(" ");
   const [monthData, setmonthData] = useState([]);
+  const [popup, setpopup] = useState(false);
 
   const [averages, setAverages] = useState([]);
 

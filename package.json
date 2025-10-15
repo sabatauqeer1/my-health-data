@@ -1,0 +1,21 @@
+{
+  "name": "my-health-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabatauqeer1/my-health-data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabatauqeer1/my-health-data/issues"
+  },
+  "homepage": "https://github.com/sabatauqeer1/my-health-data#readme"
+}
